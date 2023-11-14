@@ -78,14 +78,24 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   database_type: "postgres",
-  REDIS_URL: REDIS_URL,
+  redis_url: REDIS_URL,
   // Uncomment the following lines to enable REDIS
   // redis_url: REDIS_URL
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
-  projectConfig: { database_extra: { ssl: { rejectUnauthorized: false } } },
+  projectConfig: {
+    redis_url: REDIS_URL,
+    database_url: DATABASE_URL,
+    database_type: "postgres",
+    store_cors: STORE_CORS,
+    admin_cors: ADMIN_CORS,
+    database_extra:
+      process.env.NODE_ENV !== "development"
+        ? { ssl: { rejectUnauthorized: false } }
+        : {},
+  },
   plugins,
   modules,
 };
