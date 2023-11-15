@@ -54,12 +54,19 @@ const plugins = [
   },
 
   { resolve: `medusa-fulfillment-manual` },
+  // {
+  //   resolve: `medusa-file-supabase`,
+  //   options: {
+  //     project_ref: process.env.PROJECT_REF,
+  //     service_key: process.env.SERVICE_KEY,
+  //     bucket_name: process.env.BUCKET_NAME,
+  //   },
+  // },
   {
-    resolve: `medusa-file-supabase`,
+    resolve: `medusa-imgur`,
     options: {
-      project_ref: process.env.PROJECT_REF,
-      service_key: process.env.SERVICE_KEY,
-      bucket_name: process.env.BUCKET_NAME,
+      clientId: "1dff9a35d485e3b",
+      clientSecret: "c267042fb747ab66f26670528c9da8d42fa62e53",
     },
   },
 ];
