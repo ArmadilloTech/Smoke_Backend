@@ -52,7 +52,17 @@ const plugins = [
       // },
     },
   },
+
   { resolve: `medusa-fulfillment-manual` },
+  {
+    resolve: `medusa-file-supabase`,
+    options: {
+      project_ref: "ebdbahpmtagdylrasawn",
+      service_key:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImViZGJhaHBtdGFnZHlscmFzYXduIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NjI2OTc1MywiZXhwIjoyMDExODQ1NzUzfQ.XJ_4wkWPLX_0G6FkOe_pVBtmvwSU-pDFq_cumeF2D9o",
+      bucket_name: "Smoke",
+    },
+  },
 ];
 
 const modules = {
