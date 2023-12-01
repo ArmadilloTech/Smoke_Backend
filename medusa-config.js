@@ -55,6 +55,33 @@ const plugins = [
 
   { resolve: `medusa-fulfillment-manual` },
   {
+    resolve: `medusa-plugin-meilisearch`,
+    options: {
+      // config object passed when creating an instance
+      // of the MeiliSearch client
+      config: {
+        host: process.env.MEILISEARCH_HOST,
+        apiKey: process.env.MEILISEARCH_API_KEY,
+      },
+      settings: {
+        products: {
+          indexSettings: {
+            searchableAttributes: ["title", "description", "variant_sku"],
+            displayedAttributes: [
+              "title",
+              "description",
+              "variant_sku",
+              "thumbnail",
+              "handle",
+              "id",
+            ],
+          },
+          primaryKey: "id",
+        },
+      },
+    },
+  },
+  {
     resolve: `medusa-file-s3`,
     options: {
       s3_url: process.env.S3_URL,
