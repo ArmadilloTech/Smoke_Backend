@@ -149,10 +149,10 @@ module.exports = {
     database_type: "postgres",
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
-    // database_extra:
-    //   process.env.NODE_ENV !== "development"
-    //     ? { ssl: { rejectUnauthorized: false } }
-    //     : {},
+    database_extra:
+      process.env.NODE_ENV !== "development"
+        ? { ssl: { rejectUnauthorized: false } }
+        : {},
   },
   plugins,
   modules,
