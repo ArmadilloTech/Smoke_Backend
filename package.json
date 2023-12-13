@@ -19,7 +19,7 @@
     "prepare": "npm run build",
     "build": "babel src -d dist --extensions \".ts,.js\"",
     "build:admin": "medusa-admin build --deployment",
-      "postinstall": "patch-package"
+      "preinstall": "patch-package"
 
   },
   "dependencies": {
