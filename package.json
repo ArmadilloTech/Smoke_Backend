@@ -1,8 +1,8 @@
 {
-  "name": "medusa-starter-default",
+  "name": "MAtrix-web-Terpys-Starter",
   "version": "0.0.1",
-  "description": "A starter for Medusa projects.",
-  "author": "Sebastian Rindom <skrindom@gmail.com>",
+  "description": "A starter for smoke shops.",
+  "author": "Matrix Web",
   "license": "MIT",
   "keywords": [
     "sqlite",
@@ -18,7 +18,9 @@
     "heroku-postbuild": "medusa migrations run",
     "prepare": "npm run build",
     "build": "babel src -d dist --extensions \".ts,.js\"",
-    "build:admin": "medusa-admin build --deployment"
+    "build:admin": "medusa-admin build --deployment",
+      "postinstall": "patch-package"
+
   },
   "dependencies": {
     "@medusajs/admin": "^7.1.1",
@@ -29,7 +31,6 @@
     "@medusajs/file-local": "^1.0.2",
     "@medusajs/icons": "^1.0.0",
     "@medusajs/medusa": "^1.18",
-  
     "@medusajs/ui": "^1.0.0",
     "@tanstack/react-query": "5.8.4",
     "babel-preset-medusa-package": "^1.1.13",
@@ -46,6 +47,8 @@
     "medusa-payment-manual": "^1.0.24",
     "medusa-payment-stripe": "^6.0.4",
     "medusa-plugin-meilisearch": "^2.0.10",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "prism-react-renderer": "^2.0.4",
     "typeorm": "^0.3.16"
   },
