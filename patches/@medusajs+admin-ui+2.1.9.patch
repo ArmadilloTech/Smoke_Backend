@@ -4,9 +4,6 @@ index a2a76f6..adfb812 100644
 -        <Button
 -          size="small"
 -          variant="ghost"
--          className="mr-3 h-8 w-8"
--          onClick={() => setShowSupportForm(!showSupportform)}
 -        >
 -          <HelpCircleIcon size={24} />
 -        </Button>
-
