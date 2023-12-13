@@ -36,12 +36,7 @@ const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
-  // {
-  //   resolve: `@medusajs/file-local`,
-  //   options: {
-  //     upload_dir: "uploads",
-  //   },
-  // },
+
   {
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
@@ -66,9 +61,16 @@ const plugins = [
       settings: {
         products: {
           indexSettings: {
-            searchableAttributes: ["title", "description", "variant_sku"],
+            searchableAttributes: [
+              "title",
+              "description",
+              "variant_sku",
+              "subtitle",
+            ],
             displayedAttributes: [
               "title",
+              "subtitle",
+              "type",
               "description",
               "variant_sku",
               "thumbnail",
@@ -95,22 +97,6 @@ const plugins = [
       prefix: process.env.S3_PREFIX,
     },
   },
-
-  // {
-  //   resolve: `medusa-file-supabase`,
-  //   options: {
-  //     project_ref: process.env.PROJECT_REF,
-  //     service_key: process.env.SERVICE_KEY,
-  //     bucket_name: process.env.BUCKET_NAME,
-  //   },
-  // },
-  // {
-  //   resolve: `medusa-imgur`,
-  //   options: {
-  //     clientId: string,
-  //     clientSecret: string,
-  //   },
-  // },
 ];
 
 const modules = {
