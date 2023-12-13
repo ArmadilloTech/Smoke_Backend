@@ -1,9 +1,0 @@
-diff --git a/node_modules/@medusajs/admin-ui/ui/src/components/organisms/topbar/index.tsx b/node_modules/@medusajs/admin-ui/ui/src/components/organisms/topbar/index.tsx
-index a2a76f6..adfb812 100644
---- a/node_modules/@medusajs/admin-ui/ui/src/components/organisms/topbar/index.tsx
--        <Button
--          size="small"
--          variant="ghost"
--        >
--          <HelpCircleIcon size={24} />
--        </Button>
