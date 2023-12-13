@@ -18,8 +18,7 @@
     "heroku-postbuild": "medusa migrations run",
     "prepare": "npm run build",
     "build": "babel src -d dist --extensions \".ts,.js\"",
-    "build:admin": "medusa-admin build --deployment",
-      "preinstall": "patch-package"
+    "build:admin": "medusa-admin build --deployment"
 
   },
   "dependencies": {
