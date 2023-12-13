@@ -21,14 +21,14 @@
     "build:admin": "medusa-admin build --deployment"
   },
   "dependencies": {
-    "@medusajs/admin": "src/@medusajs",
+    "@medusajs/admin": "^7.1.1",
     "@medusajs/cache-inmemory": "^1.8.8",
     "@medusajs/cache-redis": "^1.8.8",
     "@medusajs/event-bus-local": "^1.9.6",
     "@medusajs/event-bus-redis": "^1.8.9",
     "@medusajs/file-local": "^1.0.2",
     "@medusajs/icons": "^1.0.0",
-    "@medusajs/medusa": "^1.18",
+    "@medusajs/medusa": "^1.18+git+https://github.com/ArmadilloTech/medusa",
     "@medusajs/ui": "^1.0.0",
     "@tanstack/react-query": "5.8.4",
     "babel-preset-medusa-package": "^1.1.13",
