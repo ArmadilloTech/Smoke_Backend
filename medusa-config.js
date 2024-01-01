@@ -49,6 +49,7 @@ const plugins = [
   },
 
   { resolve: `medusa-fulfillment-manual` },
+
   {
     resolve: `medusa-plugin-meilisearch`,
     options: {
